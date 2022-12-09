@@ -547,6 +547,7 @@ li > .footer-contact {
   transform: translate(-50%, -50%) scale(1) skew(0deg, 0deg);
   width: 528px;
   min-height: 581px;
+  padding: 40px;
   border-radius: 4px;
   background-color: var(--primary-backgroun-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -559,6 +560,15 @@ li > .footer-contact {
   transform: translate(-50%, -50%) scale(1.25) skew(30deg, 30deg);
   box-shadow: none;
 }
+.modal-title {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  color: var(--primary-text-title);
+}
+
 .modal-close {
   display: flex;
   justify-content: center;
@@ -573,7 +583,69 @@ li > .footer-contact {
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--primary-backgroun-color);
 }
+.label-form {
+  margin-bottom: 4px;
+}
+.input-form {
+  display: flex;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+.coment-form {
+  width: 100%;
+  height: 120px;
+  resize: none;
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+.coment-form::placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+.politico-form {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
 
+.pilitico-label {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--primary-text-color);
+}
+.botton-form {
+  display: block;
+  width: 200px;
+  height: 50px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  color: var(--primary-backgroun-color);
+  background-color: var(--accent-color);
+}
 .is-hidden {
   opacity: 0;
   visibility: hidden;
