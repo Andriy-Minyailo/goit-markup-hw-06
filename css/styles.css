@@ -582,25 +582,58 @@ li > .footer-contact {
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--primary-backgroun-color);
+  color: var(--logo-header-end-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.label-form {
-  margin-bottom: 4px;
+.modal-close:hover,
+.modal-close:focus {
+  color: var(--accent-color);
 }
+
+.icon-close {
+  fill: currentColor;
+}
+
+.input-container {
+  position: relative;
+  color: var(--primary-text-title);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
+.input-container:focus-within {
+  color: var(--accent-color);
+}
+
 .input-form {
-  display: flex;
   width: 100%;
   height: 40px;
-  margin-bottom: 10px;
+  padding-left: 42px;
+  font-size: 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.input-form:focus-within {
+  border-color: var(--accent-color);
+  outline: none;
+}
+.icon-modal-input {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  fill: currentColor;
 }
 .coment-form {
   width: 100%;
   height: 120px;
   resize: none;
+  margin-top: 4px;
   padding: 12px 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .coment-form::placeholder {
   font-style: normal;
@@ -610,12 +643,39 @@ li > .footer-contact {
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
+.coment-form:focus-within {
+  border-color: var(--accent-color);
+  outline: none;
+}
 .politico-form {
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: left;
+  padding-left: 36px;
   align-items: center;
   margin-top: 20px;
+}
+.input-check:checked ~ .icon-check {
+  opacity: 1;
+}
+.input-check:checked ~ .icon-now-check {
+  opacity: 0;
+}
+.icon-check {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.icon-now-check {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .pilitico-label {
@@ -624,6 +684,21 @@ li > .footer-contact {
   font-size: 14px;
   line-height: 1.71;
   color: var(--primary-text-color);
+}
+.politico-link {
+  position: relative;
+  color: var(--accent-color);
+  text-decoration: none;
+}
+.politico-link::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 10%;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--accent-color);
 }
 .botton-form {
   display: block;
