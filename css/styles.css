@@ -431,6 +431,64 @@ li > .footer-contact {
 .link-footer-social:focus {
   background-color: var(--accent-color);
 }
+.footer-mail-container {
+  padding-top: 12px;
+  margin-left: auto;
+}
+.footer-mail-text {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--primary-backgroun-color);
+  margin-bottom: 20px;
+}
+.footer-mail-input {
+  width: 358px;
+  height: 50px;
+  padding-left: 16px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  outline: none;
+  color: var(--primary-backgroun-color);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-mail-input:focus-within {
+  border-color: var(--accent-color);
+}
+
+.footer-mail-input::placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer-mail-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  margin-left: 12px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  background-color: var(--accent-color);
+  border: none;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: var(--primary-backgroun-color);
+}
+.footer-mail-icon {
+  margin-left: 10px;
+}
 
 /* _____________________портфоліо */
 .lists-filter {
@@ -529,6 +587,7 @@ li > .footer-contact {
 .link-portfolio:focus .portdolio-text-hover {
   transform: translateY(0);
 }
+
 /* ----------------------------модальне вікно */
 .backdrop {
   position: fixed;
